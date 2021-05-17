@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="desription" content="Site creation" />
+    <meta name="keywords" content="Создание сайтов, вёрстка сайтов" />
+
+    <!--- Favicons --->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ActiveBox</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:ital,wght@0,300;0,700;0,800;1,300;1,600&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
+</head>
+<body>
+
+<!--Sprite-->
+<svg style="display: none;">
+    <symbol id="facebook" viewBox="0 0 470.513 470.513">
+        <g>
+            <path d="M271.521,154.17v-40.541c0-6.086,0.28-10.8,0.849-14.13c0.567-3.335,1.857-6.615,3.859-9.853
+		c1.999-3.236,5.236-5.47,9.706-6.708c4.476-1.24,10.424-1.858,17.85-1.858h40.539V0h-64.809c-37.5,0-64.433,8.897-80.803,26.691
+		c-16.368,17.798-24.551,44.014-24.551,78.658v48.82h-48.542v81.086h48.539v235.256h97.362V235.256h64.805l8.566-81.086H271.521z"/>
+        </g>
+    </symbol>
+    <symbol id="instagram" viewBox="0 0 511 511.9">
+        <g>
+            <path d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0"/><path d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0"/><path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0"/>
+        </g>
+    </symbol>
+    <symbol id="vk" viewBox="0 0 24 24">
+        <g>
+            <path d="m19.915 13.028c-.388-.49-.277-.708 0-1.146.005-.005 3.208-4.431 3.538-5.932l.002-.001c.164-.547 0-.949-.793-.949h-2.624c-.668 0-.976.345-1.141.731 0 0-1.336 3.198-3.226 5.271-.61.599-.892.791-1.225.791-.164 0-.419-.192-.419-.739v-5.105c0-.656-.187-.949-.74-.949h-4.126c-.419 0-.668.306-.668.591 0 .622.945.765 1.043 2.515v3.797c0 .832-.151.985-.486.985-.892 0-3.057-3.211-4.34-6.886-.259-.713-.512-1.001-1.185-1.001h-2.625c-.749 0-.9.345-.9.731 0 .682.892 4.073 4.148 8.553 2.17 3.058 5.226 4.715 8.006 4.715 1.671 0 1.875-.368 1.875-1.001 0-2.922-.151-3.198.686-3.198.388 0 1.056.192 2.616 1.667 1.783 1.749 2.076 2.532 3.074 2.532h2.624c.748 0 1.127-.368.909-1.094-.499-1.527-3.871-4.668-4.023-4.878z"/>
+        </g>
+    </symbol>
+</svg>
+
+<!--Header-->
+
+<header class="header" id="header">
+    <div class="container">
+       <div class="header__inner">
+           <div class="header__logo">
+               <img src="images/under__png.png" alt="">
+           </div>
+           <nav class="nav" id="nav">
+            <a class="nav__link" href="#" data-scroll="#features">Услуги</a>
+            <a class="nav__link" href="#" data-scroll="#works">Примеры работ</a>
+            <a class="nav__link" href="#" data-scroll="#team">Наши сотрудники</a>
+            <a class="nav__link" href="#" data-scroll="#reviews">Отзывы</a>
+            <a class="nav__link" href="#" data-scroll="#download">Контакты</a>
+           </nav>
+           <button class="burger" type="button" id="navToggle">
+               <span class="burger__item">Menu</span>
+           </button>
+       </div>
+    </div>
+</header>
+
+<!--Intro-->
+
+<div class="intro" id="intro">
+    <div class="container">
+        <div class="intro__inner">
+            <h1 class="intro__title">Ателье "Underground" на Ворошиловском</h1>
+            <h2 class="intro__subtitle">Ремонт и пошив одежды. Подгонка по фигуре. Индивидуальный пошив.</h2>
+            <a class="btn btn--red" href="#">Узнать больше</a>
+         </div>
+    </div>
+</div>
+
+
+<!--Features-->
+<div class="container" id="features">
+    <div class="features">
+        <div class="features__item">
+            <img class="features__icon"  src="images/features/Feature-1.png" alt="">
+            <h4 class="features__title">Ремонт одежды</h4>
+            <div class="features__text">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper
+            </div>
+
+        </div>
+        <div class="features__item">
+            <img class="features__icon"  src="images/features/Feature-2.png" alt="">
+            <h4 class="features__title">Индивидуальный пошив</h4>
+            <div class="features__text">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper
+            </div>
+
+        </div>
+        <div class="features__item">
+            <img class="features__icon"  src="images/features/Feature-3.png" alt="">
+            <h4 class="features__title">Работа с кожей</h4>
+            <div class="features__text">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper
+            </div>
+
+        </div>
+        <div class="features__item">
+            <img class="features__icon"  src="images/features/Feature-4.png" alt="">
+            <h4 class="features__title">Меховые изделия</h4>
+            <div class="features__text">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper
+            </div>
+
+        </div>
+        <div class="features__item">
+            <img class="features__icon"  src="images/features/Feature-5.png" alt="">
+            <h4 class="features__title">Пошив штор</h4>
+            <div class="features__text">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper
+            </div>
+
+        </div>
+        <div class="features__item">
+            <img class="features__icon"  src="images/features/Feature-6.png" alt="">
+            <h4 class="features__title">Одежда для питомцев</h4>
+            <div class="features__text">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!--Works-->
+<div class="works" id="works">
+        <div class="works__item">
+        <img class="works__photo" src="images/works/work-1.jpg" alt="">
+            <div class="works__content">
+                <div class="works__title">Project Name</div>
+                <div class="works__text">User Interface Design</div>
+            </div>
+        </div>
+    <div class="works__item">
+        <img class="works__photo" src="images/works/work-2.jpg" alt="">
+        <div class="works__content">
+            <div class="works__title">Project Name</div>
+            <div class="works__text">User Interface Design</div>
+        </div>
+    </div>
+    <div class="works__item">
+        <img class="works__photo" src="images/works/work-3.jpg" alt="">
+        <div class="works__content">
+            <div class="works__title">Project Name</div>
+            <div class="works__text">User Interface Design</div>
+        </div>
+    </div>
+    <div class="works__item">
+        <img class="works__photo" src="images/works/work-4.jpg" alt="">
+        <div class="works__content">
+            <div class="works__title">Project Name</div>
+            <div class="works__text">User Interface Design</div>
+        </div>
+    </div>
+    <div class="works__item">
+        <img class="works__photo" src="images/works/work-5.jpg" alt="">
+        <div class="works__content">
+            <div class="works__title">Project Name</div>
+            <div class="works__text">User Interface Design</div>
+        </div>
+    </div>
+    <div class="works__item">
+        <img class="works__photo" src="images/works/work-6.jpg" alt="">
+        <div class="works__content">
+            <div class="works__title">Project Name</div>
+            <div class="works__text">User Interface Design</div>
+        </div>
+    </div>
+    <div class="works__item">
+        <img class="works__photo" src="images/works/work-7.jpg" alt="">
+        <div class="works__content">
+            <div class="works__title">Project Name</div>
+            <div class="works__text">User Interface Design</div>
+        </div>
+    </div>
+    <div class="works__item">
+        <img class="works__photo" src="images/works/work-8.jpg" alt="">
+        <div class="works__content">
+            <div class="works__title">Project Name</div>
+            <div class="works__text">User Interface Design</div>
+        </div>
+    </div>
+</div><!--Works-->
+
+
+<!-- Team -->
+
+<div class="team" id="team">
+    <div class="container">
+        <div class="team__inner">
+
+            <div class="team__item">
+                <img class="team__photo" src="images/team/team-5.jpg" alt="">
+                <div class="team__name">Дмитрий</div>
+                <div class="team__prof">Портной-закройщик</div>
+                <div class="team__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem culpa debitis dolores eligendi et exercitationem harum, impedit in labore praesentium recusandae rem, voluptatum! Beatae illo nisi nobis optio tempora!
+                </div>
+                <div class="social">
+                    <a class="social__item" href="#" target="_blank">
+                       <svg class="social__icon">
+                           <use xlink:href="#facebook"></use>
+                       </svg>
+                    </a>
+                    <a class="social__item" href="https://www.instagram.com/atelier_underground" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </a>
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#vk"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="team__item">
+                <img class="team__photo" src="images/team/team-6.jpg" alt="">
+                <div class="team__name">Венера</div>
+                <div class="team__prof">Портной-закройщик</div>
+                <div class="team__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi doloremque est reprehenderit sed soluta. Accusamus aperiam consequuntur dicta eaque exercitationem expedita illo nam, nemo nulla possimus quos reiciendis saepe sunt.
+                </div>
+<!--                <div class="social">-->
+<!--                    <a class="social__item" href="#" target="_blank">-->
+<!--                        <svg class="social__icon">-->
+<!--                            <use xlink:href="#facebook"></use>-->
+<!--                        </svg>-->
+<!--                    </a>-->
+<!--                    <a class="social__item" href="#" target="_blank">-->
+<!--                        <svg class="social__icon">-->
+<!--                            <use xlink:href="#instagram"></use>-->
+<!--                        </svg>-->
+<!--                    </a>-->
+<!--                    <a class="social__item" href="#" target="_blank">-->
+<!--                        <svg class="social__icon">-->
+<!--                            <use xlink:href="#vk"></use>-->
+<!--                        </svg>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--&lt;!&ndash;            <div class="team__item">&ndash;&gt;-->
+<!--                <img class="team__photo" src="images/team/team-3.jpg" alt="">-->
+<!--                <div class="team__name">Victoria Valdez</div>-->
+<!--                <div class="team__prof">UI Designer</div>-->
+<!--                <div class="team__text">-->
+<!--                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo.-->
+<!--                </div>-->
+<!--                <div class="social">-->
+<!--                    <a class="social__item" href="#" target="_blank">-->
+<!--                        <svg class="social__icon">-->
+<!--                            <use xlink:href="#facebook"></use>-->
+<!--                        </svg>-->
+<!--                    </a>-->
+<!--                    <a class="social__item" href="#" target="_blank">-->
+<!--                        <svg class="social__icon">-->
+<!--                            <use xlink:href="#instagram"></use>-->
+<!--                        </svg>-->
+<!--                    </a>-->
+<!--                    <a class="social__item" href="#" target="_blank">-->
+<!--                        <svg class="social__icon">-->
+<!--                            <use xlink:href="#vk"></use>-->
+<!--                        </svg>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="team__item">-->
+<!--                <img class="team__photo" src="images/team/team-4.jpg" alt="">-->
+<!--                <div class="team__name">Beverly Little</div>-->
+<!--                <div class="team__prof">Data Scientist</div>-->
+<!--                <div class="team__text">-->
+<!--                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo.-->
+<!--                </div>-->
+                <div class="social">
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+                    <a class="social__item" href="https://www.instagram.com/venera_atelierrnd/" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </a>
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#vk"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+        </div><!--    /.team__inner-->
+    </div> <!-- /.container -->
+</div><!-- /.team -->
+
+
+<!-- Testimonials-->
+<div class="reviews" id="reviews">
+    <div class="container">
+        <div class="reviews__slider" id="reviewsSlider">
+            <div class="slick-item">
+                <div class="reviews__item">
+                    <div class="reviews__photo">
+                        <img class="reviews__image" src="images/reviews/review-1.jpg">
+                    </div>
+                    <div class="reviews__content">
+                        <div class="reviews__text">Второй раз обращаюсь в данное ателье и второй раз удовлетворена их работой. Сперва перешивала жилетку, а теперь шубу. В итоге, получила обновленное пальтишко по моим размерам. Ателье действительно хорошее, уже дважды убедилась. Могу смело советовать!</div>
+                        <div class="reviews__author">Марина, Знаток города 1 уровня (2ГИС)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slick-item">
+                <div class="reviews__item">
+                    <div class="reviews__photo">
+                        <img class="reviews__image" src="images/reviews/review-1.jpg">
+                    </div>
+                    <div class="reviews__content">
+                        <div class="reviews__text">Перешивала сложные вещи: брюки, юбки, всегда супер!</div>
+                        <div class="reviews__author">Darya Ilkevich, Знаток города 5 уровня(Yandex)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- /.container -->
+</div> <!-- /.reviews -->
+
+
+<!-- Download -->
+<div class="download" id="download">
+    <div class="container">
+        <h3 class="download__title">Остались вопросы? Свяжитесь с нами!</h3>
+        <div class="download__text">
+            <p>Форма для обратной свзяи</p>
+        </div>
+        <a class="btn btn--red btn--long" href="#">Задать вопрос</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__block">
+                <h4 class="footer__title">Наш адрес:</h4>
+                <address class="footer__address"><div>344010, Ростов-на-Дону</div>
+                    <div>пр-кт. Ворошиловский 46/176</div></address>
+
+
+
+            </div>
+            <div class="footer__block">
+                <h4 class="footer__title">Мы в соц.сетях</h4>
+                <div class="social social--footer">
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </a>
+                    <a class="social__item" href="#" target="_blank">
+                        <svg class="social__icon">
+                            <use xlink:href="#vk"></use>
+                        </svg>
+                    </a>
+                </div>
+
+
+
+            </div>
+            <div class="footer__block">
+                <h4 class="footer__title">Режим работы:</h4>
+                <div class="footer__text"><p>Пн-Вс 10:00-20:00</p><p> без перерыва и выходных</p></div>
+
+
+
+            </div>
+
+        </div> <!-- /.footer__inner -->
+    </div><!-- /.container -->
+
+    <div class="copyright">
+        <div class="container">
+            <div class="copyright__text"><div>Copyright © 2021 . All Rights Reserved</div>
+                <div>Made by <span>Создатель сайта</span></div></div>
+        </div>
+    </div>
+</footer>
+
+<!-- Javascript -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="app.js"></script>
+
+
+</body>
+</html>
