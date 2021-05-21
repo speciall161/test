@@ -64,7 +64,9 @@ p {
     align-items: center;
 
 }
-
+.header__logo__tel{
+    margin-left: 20px;
+}
 .header__logo:hover {
     opacity: 50%;
     transition: opacity .2s linear;
@@ -91,7 +93,24 @@ p {
     font-weight: 600;
 
 }
+.nav__link__tel{
+    margin-left: 50px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: .75;
+    transition: opacity .2s linear;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-bottom: 2px;
+    font-family: SuisseIntl, Helvetica, Arial, sans-serif;
+
+}
 .nav__link:hover{
+    opacity: 1;
+
+}
+.nav__link__tel:hover{
     opacity: 1;
 
 }
@@ -221,7 +240,7 @@ p {
     flex-wrap: wrap;
 }
 .works__item{
-    width: 25%;
+    width: 33.3333%;
     height: 350px;
     position: relative;
     overflow: hidden;
